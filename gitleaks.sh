@@ -6,11 +6,11 @@ if [ ! -z $TRAVIS_PULL_REQUEST ]; then
     PR=$TRAVIS_PULL_REQUEST
     REPO_SLUG=$TRAVIS_REPO_SLUG
 else [ ! -z $CIRCLE_PR_NUMBER ]
-    echo $CI_PULL_REQUEST;
+    
     PR=${CIRCLE_PULL_REQUEST##*/}
     REPO_SLUG=$CIRCLE_PROJECT_USERNAME"/"$CIRCLE_PROJECT_REPONAME
 fi
-
+echo $CI_PULL_REQUEST;
 PRDIFF=$(curl -u $GITHUB_USERNAME:$GITHUB_API_TOKEN \
      -H 'Accept: application/vnd.github.VERSION.diff' \
      https://api.github.com/repos/$REPO_SLUG/pulls/$PR)
