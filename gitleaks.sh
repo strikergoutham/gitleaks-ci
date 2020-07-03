@@ -28,8 +28,8 @@ RE=(
 )
 LEAKS=()
 echo "hello!!!!";
-echo $CI_PULL_REQUEST;
-echo $CIRCLE_PULL_REQUEST;
+echo "$CI_PULL_REQUEST";
+echo "$CIRCLE_PULL_REQUEST";
 echo "checking PR #$PR from $REPO_SLUG"
 
 # iterate diff lines and check for matches
