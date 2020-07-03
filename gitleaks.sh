@@ -10,7 +10,6 @@ else [ ! -z $CIRCLE_PR_NUMBER ]
     PR=${CIRCLE_PULL_REQUEST##*/}
     REPO_SLUG=$CIRCLE_PROJECT_USERNAME"/"$CIRCLE_PROJECT_REPONAME
 fi
-echo $CI_PULL_REQUEST;
 PRDIFF=$(curl -u $GITHUB_USERNAME:$GITHUB_API_TOKEN \
      -H 'Accept: application/vnd.github.VERSION.diff' \
      https://api.github.com/repos/$REPO_SLUG/pulls/$PR)
@@ -28,7 +27,8 @@ RE=(
     "heroku.*[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}"
 )
 LEAKS=()
-
+echo "hello!!!!";
+echo $CI_PULL_REQUEST;
 echo "checking PR #$PR from $REPO_SLUG"
 
 # iterate diff lines and check for matches
