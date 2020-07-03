@@ -20,7 +20,7 @@ RE=(
     "-----BEGIN RSA PRIVATE KEY-----"
     "-----BEGIN DSA PRIVATE KEY-----"
     "-----BEGIN OPENSSH PRIVATE KEY-----"
-    "AKIA[0-9A-Z]{16}"
+    "AKIA[0-9A-Z]*"
     "facebook.*['\"][0-9a-f]{32}['\"]"
     "reddit.*['\"][0-9a-zA-Z]{14}['\"]"
     "twitter.*['\"][0-9a-zA-Z]{35,44}['\"]"
