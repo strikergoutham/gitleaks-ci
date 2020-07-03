@@ -5,11 +5,12 @@ REPO_SLUG=""
 if [ ! -z $TRAVIS_PULL_REQUEST ]; then
     PR=$TRAVIS_PULL_REQUEST
     REPO_SLUG=$TRAVIS_REPO_SLUG
-else [ ! -z $CIRCLE_PR_NUMBER ]
-    echo "hello!!!!!!!!!"
-    PR=${CIRCLE_PULL_REQUEST##*/}
+else [ ! -z $CIRCLE_PULL_REQUEST ]
+    echo "hello!!!!!!!!!";
+    PR=${CIRCLE_PULL_REQUEST##*/};
     echo $CIRCLE_BRANCH;
-    echo $CIRCLE_PR_NUMBER;
+    echo $CIRCLE_PULL_REQUEST;
+    echo $CIRCLE_PULL_REQUESTS;
     echo $PR;
     echo "DONE";
     
